@@ -411,10 +411,13 @@
     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     <script>
         window.addEventListener("message", function(e) {
-            if (e.data && e.data.type === "tally-form-submitted") {
-                document.getElementById("rsvp-form").classList.add("hidden");
-                document.getElementById("rsvp-thanks").classList.remove("hidden");
-            }
+            try {
+                var data = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
+                if (data && data.type === "tally-form-submitted") {
+                    document.getElementById("rsvp-form").classList.add("hidden");
+                    document.getElementById("rsvp-thanks").classList.remove("hidden");
+                }
+            } catch(err) {}
         });
     </script>
 
