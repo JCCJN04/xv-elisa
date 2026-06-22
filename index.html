@@ -372,16 +372,23 @@
             <div class="relative z-10 max-w-2xl mx-auto glass-panel p-8 md:p-12 rounded-3xl">
                 <h2 class="font-accent-script text-accent-script text-primary mb-8 text-4xl">Espero contar contigo</h2>
 
-                <iframe data-tally-src="https://tally.so/embed/yPgjeW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    loading="lazy"
-                    width="100%"
-                    height="400"
-                    frameborder="0"
-                    marginheight="0"
-                    marginwidth="0"
-                    title="RSVP · XV Años Elisa Ximena"
-                    class="rounded-xl"
-                ></iframe>
+                <div id="rsvp-form">
+                    <iframe data-tally-src="https://tally.so/embed/yPgjeW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                        loading="lazy"
+                        width="100%"
+                        height="400"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="RSVP · XV Años Elisa Ximena"
+                        class="rounded-xl"
+                    ></iframe>
+                </div>
+
+                <div id="rsvp-thanks" class="hidden py-8 text-center">
+                    <p class="font-accent-script text-4xl text-primary mb-4">¡Gracias por confirmar! 🌸</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Estamos muy felices de que puedas acompañarnos en este día tan especial para Elisa Ximena.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -402,6 +409,14 @@
 
     <!-- Tally Embed Script -->
     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    <script>
+        window.addEventListener("message", function(e) {
+            if (e.data && e.data.type === "tally-form-submitted") {
+                document.getElementById("rsvp-form").classList.add("hidden");
+                document.getElementById("rsvp-thanks").classList.remove("hidden");
+            }
+        });
+    </script>
 
     <!-- Scripts -->
     <script>
