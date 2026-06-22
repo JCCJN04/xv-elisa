@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>XV Años · Elisa Ximena · 25 Julio 2026</title>
+    
+    <!-- Tailwind CSS CDN Configurado como en Stitch -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Fuentes Premium Clásicas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#e4e2e1",
+                        "primary-fixed": "#c2e9f6",
+                        "on-surface": "#1b1c1c",
+                        "background": "#fbf9f8",
+                        "surface-bright": "#fbf9f8",
+                        "on-secondary-fixed": "#281719",
+                        "on-primary-fixed-variant": "#274c56",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#41484a",
+                        "tertiary": "#5d5e5f",
+                        "surface-variant": "#e4e2e1",
+                        "secondary-container": "#f8d8db",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "inverse-primary": "#a7cdd9",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#001f27",
+                        "secondary-fixed-dim": "#debfc2",
+                        "secondary": "#70585b",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#574144",
+                        "primary-fixed-dim": "#a7cdd9",
+                        "on-tertiary-container": "#595a5a",
+                        "tertiary-fixed": "#e3e2e2",
+                        "surface-tint": "#3f646f",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-error": "#ffffff",
+                        "primary": "#3f646f",
+                        "primary-container": "#b2d8e5", // Celeste
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#d2d2d2", // Silver
+                        "inverse-surface": "#303030",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae8e7",
+                        "on-primary-container": "#3b5f6a",
+                        "on-secondary-container": "#755d5f",
+                        "outline": "#71787b",
+                        "secondary-fixed": "#fbdbde",
+                        "on-background": "#1b1c1c",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c1c8ca",
+                        "surface": "#fbf9f8",
+                        "error-container": "#ffdad6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "container-max": "1140px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    fontSize: {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["56px", { "lineHeight": "1.1", "fontWeight": "600" }],
+                        "accent-script": ["36px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.05em", "fontWeight": "300" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "display-lg": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    },
+                    fontFamily: {
+                        "label-caps": ["Montserrat", "sans-serif"],
+                        "display-lg-mobile": ["Cormorant Garamond", "serif"],
+                        "accent-script": ["Pinyon Script", "cursive"],
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "headline-md": ["Cormorant Garamond", "serif"],
+                        "display-lg": ["Cormorant Garamond", "serif"]
+                    },
+                    boxShadow: {
+                        "ambient-primary": "0px 10px 30px rgba(178, 216, 229, 0.3)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .silver-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #C0C0C0, transparent);
+            width: 100%;
+            margin: 2rem 0;
+        }
+        .ambient-glow {
+            box-shadow: 0px 10px 30px rgba(178, 216, 229, 0.3);
+        }
+        .glass-panel {
+            background: rgba(251, 249, 248, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Ocultar scrollbar para elegancia */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fbf9f8; }
+        ::-webkit-scrollbar-thumb { background: #d2d2d2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a7cdd9; }
+
+        /* Petals */
+        .petal {
+            position: fixed;
+            top: -10vh;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+        
+        /* Animaciones suaves al scrollear */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Reproductor de música rotando */
+        .spin {
+            animation: spin 5s linear infinite;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[100svh] flex flex-col md:flex-row justify-end md:justify-between items-center pt-24 pb-16 md:pt-0 md:pb-0 px-margin-mobile md:px-0 bg-surface" id="welcome">
+            <!-- Left Side: Image (Background on mobile, 50% width on desktop) -->
+            <div class="absolute inset-0 z-0 md:relative md:w-1/2 md:h-[100svh]">
+                <img alt="Elisa Ximena XV Años" class="w-full h-full object-cover object-top opacity-80 md:opacity-100" src="foto5.jpeg"/>
+                <!-- Gradient only visible on mobile -->
+                <div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/10 to-surface md:hidden"></div>
+            </div>
+            
+            <!-- Right Side: Content -->
+            <div class="relative z-10 w-[92%] max-w-3xl mx-auto md:w-1/2 md:flex md:flex-col md:justify-center md:items-center md:px-8 lg:px-24 md:h-[100svh]">
+                <div class="glass-panel md:bg-transparent md:border-none md:backdrop-blur-none md:shadow-none p-6 md:p-0 rounded-3xl text-center w-full reveal active">
+                    <p class="font-label-caps text-[10px] md:text-label-caps text-primary mb-4 tracking-[0.3em]">ESTÁS INVITADO A MIS XV AÑOS</p>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-[48px] md:text-display-lg text-on-surface mb-4 leading-none">
+                        Elisa Ximena
+                    </h1>
+                    <div class="silver-divider w-1/2 mx-auto my-4 md:my-8"></div>
+                    <p class="font-accent-script text-accent-script md:text-5xl text-secondary mt-2">
+                        25 Julio 2026
+                    </p>
+                    
+                    <!-- Countdown -->
+                    <div class="mt-8 flex justify-center gap-4 md:gap-8 font-body-md text-on-surface-variant">
+                        <div class="flex flex-col items-center">
+                            <span id="days" class="text-3xl md:text-4xl font-headline-md text-primary">00</span>
+                            <span class="text-[10px] md:text-xs uppercase tracking-widest mt-1">Días</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span id="hours" class="text-3xl md:text-4xl font-headline-md text-primary">00</span>
+                            <span class="text-[10px] md:text-xs uppercase tracking-widest mt-1">Hrs</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span id="mins" class="text-3xl md:text-4xl font-headline-md text-primary">00</span>
+                            <span class="text-[10px] md:text-xs uppercase tracking-widest mt-1">Min</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span id="secs" class="text-3xl md:text-4xl font-headline-md text-primary">00</span>
+                            <span class="text-[10px] md:text-xs uppercase tracking-widest mt-1">Seg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verse Section & Foto 2 -->
+        <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface text-center reveal" id="story">
+            <div class="max-w-4xl mx-auto relative px-4 md:px-8 mb-16">
+                <div class="silver-divider w-1/3 mx-auto mb-10 relative z-10"></div>
+                <p class="font-accent-script text-[40px] md:text-[64px] text-on-surface leading-tight mb-10 relative z-10 px-4">
+                    "Tu palabra es una lámpara bajo mis pies; es la luz que ilumina mi camino!"
+                </p>
+                <div class="silver-divider w-1/3 mx-auto mb-8 relative z-10"></div>
+                <p class="font-label-caps text-[10px] md:text-xs text-secondary tracking-[0.4em] relative z-10">SALMO 119:105</p>
+            </div>
+            
+            <!-- Foto 2 esparcida -->
+            <div class="max-w-5xl mx-auto reveal">
+                <img src="foto2.jpeg" alt="XV Años" class="w-full h-auto rounded-3xl shadow-sm hover:scale-[1.01] transition-transform duration-500">
+            </div>
+        </section>
+        
+        <!-- The Event (Ceremony & Reception) con Fotos 4 y 7 -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest reveal" id="event">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="font-headline-md text-headline-md text-center text-primary mb-16">El Evento</h2>
+                
+                <!-- Ceremony Block con Foto 4 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center mb-24">
+                    <div class="order-2 md:order-1 reveal">
+                        <img src="foto4.jpeg" alt="Ceremonia" class="w-full h-auto rounded-3xl shadow-sm hover:scale-[1.01] transition-transform duration-500">
+                    </div>
+                    <div class="glass-panel p-8 rounded-2xl text-center flex flex-col items-center order-1 md:order-2">
+                        <svg class="w-12 h-12 text-secondary mb-4 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4M10 4h4" />
+                            <path d="M12 8l-8 6v8h16v-8l-8-6z" />
+                            <path d="M10 22v-5a2 2 0 0 1 4 0v5" />
+                        </svg>
+                        <h3 class="font-accent-script text-accent-script text-on-surface mb-6">Ceremonia Religiosa</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant font-medium mb-2">Parroquia de Nuestra Sra del Carmen</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-2">A las 6:00 PM</p>
+                        <p class="font-body-md text-body-md text-tertiary text-sm mb-8">Calle Alcatraces #1100<br>San Nicolás de los Garza, NL</p>
+                        <div class="w-full h-48 rounded-xl overflow-hidden border-2 border-[#c0c0c0] mb-4 relative shadow-sm group">
+                            <iframe src="https://maps.google.com/maps?q=Parroquia+de+Nuestra+Se%C3%B1ora+del+Carmen,+San+Nicolas+de+los+Garza&t=k&z=17&output=embed" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+Nuestra+Se%C3%B1ora+del+Carmen,+San+Nicolas+de+los+Garza" target="_blank" class="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                <div class="bg-white/90 text-primary px-4 py-2 rounded-full font-label-caps text-[10px] opacity-0 group-hover:opacity-100 transition-opacity shadow-sm flex items-center gap-2">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg> ABRIR MAPA
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+Nuestra+Se%C3%B1ora+del+Carmen,+San+Nicolas+de+los+Garza" target="_blank" class="inline-flex items-center gap-2 text-primary font-label-caps text-xs hover:text-primary-container transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reception Block con Foto 7 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="glass-panel p-8 rounded-2xl text-center flex flex-col items-center order-1 md:order-1">
+                        <svg class="w-12 h-12 text-secondary mb-4 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 20h20" />
+                            <path d="M4 20l2-12 4 4 2-6 2 6 4-4 2 12" />
+                            <circle cx="12" cy="4" r="1.5" />
+                            <circle cx="6" cy="6" r="1.5" />
+                            <circle cx="18" cy="6" r="1.5" />
+                        </svg>
+                        <h3 class="font-accent-script text-accent-script text-on-surface mb-6">Recepción</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant font-medium mb-2">La Fontana Eventos</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-2">A las 7:00 PM</p>
+                        <p class="font-body-md text-body-md text-tertiary text-sm mb-8">Av Republica Mexicana #711<br>San Nicolás de los Garza, NL</p>
+                        <div class="w-full h-48 rounded-xl overflow-hidden border-2 border-[#c0c0c0] mb-4 relative shadow-sm group">
+                            <iframe src="https://maps.google.com/maps?q=La+Fontana+Eventos,+San+Nicolas+de+los+Garza&t=k&z=17&output=embed" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <a href="https://www.google.com/maps/search/?api=1&query=La+Fontana+Eventos,+San+Nicolas+de+los+Garza" target="_blank" class="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                <div class="bg-white/90 text-primary px-4 py-2 rounded-full font-label-caps text-[10px] opacity-0 group-hover:opacity-100 transition-opacity shadow-sm flex items-center gap-2">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg> ABRIR MAPA
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=La+Fontana+Eventos,+San+Nicolas+de+los+Garza" target="_blank" class="inline-flex items-center gap-2 text-primary font-label-caps text-xs hover:text-primary-container transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Ver en Google Maps
+                        </a>
+                    </div>
+                    <div class="order-2 md:order-2 reveal">
+                        <img src="foto7.jpeg" alt="Recepción" class="w-full h-auto rounded-3xl shadow-sm hover:scale-[1.01] transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator Foto 1 -->
+        <section class="py-12 bg-surface-container-low">
+            <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop reveal">
+                <img src="foto1.jpeg" alt="XV Años" class="w-full h-auto rounded-3xl shadow-sm hover:scale-[1.01] transition-transform duration-500">
+            </div>
+        </section>
+
+        <!-- Parents & Dress Code Bento Grid -->
+        <section class="pt-12 pb-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low reveal">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Parents -->
+                <div class="md:col-span-7 glass-panel p-10 rounded-2xl flex flex-col justify-center items-center text-center">
+                    <p class="font-label-caps text-label-caps text-tertiary mb-6">CON LA BENDICIÓN DE MIS PADRES</p>
+                    <div class="space-y-4">
+                        <p class="font-accent-script text-accent-script text-primary">Luis Carlos Valdés Ramírez</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant">&</p>
+                        <p class="font-accent-script text-accent-script text-primary">Elisa Graciela Castillo Iglesias</p>
+                    </div>
+                </div>
+                
+                <!-- Dress Code -->
+                <div class="md:col-span-5 glass-panel p-10 rounded-2xl flex flex-col justify-center items-center text-center border-t-4 md:border-t-0 md:border-l-4 border-secondary-container">
+                    <svg class="w-12 h-12 text-secondary mb-4 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a2 2 0 0 0-2 2c0 1.1.9 2 2 2 1.5 0 2.5 1 2.5 2.5V11" />
+                        <path d="M12 11L4 15h16l-8-4z" />
+                        <path d="M4 15v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                    </svg>
+                    <h3 class="font-label-caps text-[14px] text-on-surface mb-4 tracking-widest">DRESS CODE: FORMAL</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant text-sm italic">
+                        Te pedimos amablemente reservar los colores celeste y rosa pastel para la quinceañera.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registry & Fotos 3 y 6 -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface reveal" id="registry">
+            <!-- Foto 3 esparcida -->
+            <div class="max-w-5xl mx-auto mb-24 reveal">
+                <img src="foto3.jpeg" alt="XV Años" class="w-full h-auto rounded-3xl shadow-sm hover:scale-[1.01] transition-transform duration-500">
+            </div>
+
+            <div class="text-center max-w-3xl mx-auto mb-24">
+                <h2 class="font-headline-md text-headline-md text-primary mb-6">Un Detalle Especial</h2>
+                <div class="silver-divider w-24 mx-auto mb-8"></div>
+                <p class="font-accent-script text-3xl text-on-surface-variant mb-6">
+                    Sobre ✉️ o regalo 🎁
+                </p>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    Si deseas acompañar este día con un detalle,<br>con mucho gusto lo recibimos.
+                </p>
+            </div>
+
+            <!-- Foto 6 esparcida -->
+            <div class="max-w-3xl mx-auto reveal">
+                <img src="foto6.jpeg" alt="XV Años" class="w-full h-auto rounded-3xl shadow-sm hover:scale-[1.01] transition-transform duration-500">
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container text-center relative overflow-hidden reveal" id="rsvp">
+            <!-- Decorative blur elements -->
+            <div class="absolute top-0 left-0 w-64 h-64 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-40 translate-x-1/2 translate-y-1/2"></div>
+            
+            <div class="relative z-10 max-w-2xl mx-auto glass-panel p-8 md:p-12 rounded-3xl">
+                <h2 class="font-accent-script text-accent-script text-primary mb-4 text-4xl">Espero contar contigo</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                    Favor de confirmar tu asistencia antes del 15 de julio para poder compartir este día tan especial.
+                </p>
+
+                <iframe data-tally-src="https://tally.so/embed/yPgjeW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    title="RSVP · XV Años Elisa Ximena"
+                    class="rounded-xl"
+                ></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface dark:bg-inverse-surface w-full py-12 border-t border-outline-variant/30">
+        <div class="flex flex-col items-center gap-4 px-margin-desktop w-full max-w-container-max mx-auto text-center">
+            <span class="font-accent-script text-accent-script text-primary">Elisa Ximena XV</span>
+            <a href="https://www.instagram.com/invitacionesdigitalesmty" target="_blank" rel="noopener noreferrer"
+               class="font-label-caps text-[10px] text-tertiary hover:text-primary transition-colors tracking-widest mt-4">
+                HECHO POR INVITACIONESDIGITALESMTY
+            </a>
+            <p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim text-sm mt-2">
+                © 2026. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Tally Embed Script -->
+    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+    <!-- Scripts -->
+    <script>
+
+        // 2. Countdown
+        const targetDate = new Date("July 25, 2026 18:00:00").getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) return;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("mins").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("secs").innerText = seconds.toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 3. Reveal on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        // 4. Subtle Petals (limit to fewer petals to keep it premium)
+        const colors = ['#f8d8db', '#fbdbde', '#ffffff'];
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            
+            // Random styling
+            const size = Math.random() * 8 + 6;
+            petal.style.width = size + 'px';
+            petal.style.height = size + 'px';
+            petal.style.background = colors[Math.floor(Math.random() * colors.length)];
+            petal.style.borderRadius = '50% 0 50% 0'; // Petal shape
+            
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = Math.random() * 10 + 15 + 's';
+            
+            document.body.appendChild(petal);
+            setTimeout(() => { petal.remove(); }, 25000);
+        }
+        // Crea pocos pétalos para mantenerlo elegante
+        setInterval(createPetal, 1500);
+    </script>
+</body>
+</html>

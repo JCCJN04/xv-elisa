@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/xv-elisa/(.*)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
