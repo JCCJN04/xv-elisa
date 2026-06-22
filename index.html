@@ -427,7 +427,10 @@
 
         // 2. Fallback: si la URL tiene ?rsvp=confirmado (redirect desde Tally)
         if (window.location.search.indexOf("rsvp=confirmado") !== -1) {
-            document.addEventListener("DOMContentLoaded", mostrarGracias);
+            document.addEventListener("DOMContentLoaded", function() {
+                mostrarGracias();
+                document.getElementById("rsvp").scrollIntoView({ behavior: "smooth" });
+            });
         }
     </script>
 
