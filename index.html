@@ -385,7 +385,7 @@
                     ></iframe>
                 </div>
 
-                <div id="rsvp-thanks" class="hidden py-8 text-center">
+                <div id="rsvp-thanks" style="display:none;" class="py-8 text-center">
                     <p class="font-accent-script text-4xl text-primary mb-4">¡Gracias por confirmar! 🌸</p>
                     <p class="font-body-md text-body-md text-on-surface-variant">Estamos muy felices de que puedas acompañarnos en este día tan especial para Elisa Ximena.</p>
                 </div>
@@ -410,15 +410,25 @@
     <!-- Tally Embed Script -->
     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     <script>
+        function mostrarGracias() {
+            var form = document.getElementById("rsvp-form");
+            var thanks = document.getElementById("rsvp-thanks");
+            if (form) form.style.display = "none";
+            if (thanks) thanks.style.display = "block";
+        }
+
+        // 1. postMessage de Tally (objeto o string JSON)
         window.addEventListener("message", function(e) {
             try {
                 var data = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
-                if (data && data.type === "tally-form-submitted") {
-                    document.getElementById("rsvp-form").classList.add("hidden");
-                    document.getElementById("rsvp-thanks").classList.remove("hidden");
-                }
+                if (data && data.type === "tally-form-submitted") mostrarGracias();
             } catch(err) {}
         });
+
+        // 2. Fallback: si la URL tiene ?rsvp=confirmado (redirect desde Tally)
+        if (window.location.search.indexOf("rsvp=confirmado") !== -1) {
+            document.addEventListener("DOMContentLoaded", mostrarGracias);
+        }
     </script>
 
     <!-- Scripts -->
