@@ -164,6 +164,16 @@
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
+
+        /* Pulsación elegante para el botón de música */
+        @keyframes soft-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(63, 100, 111, 0.3); }
+            70% { box-shadow: 0 0 0 15px rgba(63, 100, 111, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(63, 100, 111, 0); }
+        }
+        .music-playing {
+            animation: soft-pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
     </style>
 </head>
 
@@ -408,6 +418,15 @@
         </div>
     </footer>
 
+    <!-- Audio & Control -->
+    <audio id="bg-music" loop>
+        <source src="https://xv-elisa.vercel.app/song.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 w-14 h-14 md:w-16 md:h-16 glass-panel rounded-2xl shadow-sm flex items-center justify-center hover:scale-[1.01] transition-all duration-500 group border border-primary/20 reveal">
+        <div class="absolute inset-0 rounded-2xl bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500"></div>
+        <span id="music-icon" class="material-symbols-outlined text-primary relative z-10 transition-all duration-300" style="font-size: 28px; font-variation-settings: 'wght' 200;">volume_off</span>
+    </button>
+
     <!-- Tally Embed Script -->
     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     <script>
@@ -495,6 +514,55 @@
         }
         // Crea pocos pétalos para mantenerlo elegante
         setInterval(createPetal, 1500);
+
+        // 5. Music Control
+        const musicBtn = document.getElementById('music-btn');
+        const bgMusic = document.getElementById('bg-music');
+        const musicIcon = document.getElementById('music-icon');
+        let isMusicPlaying = false;
+
+        function toggleMusic() {
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicIcon.innerText = 'volume_off';
+                musicBtn.classList.remove('music-playing');
+            } else {
+                bgMusic.play().catch(e => console.log('Autoplay prevented:', e));
+                musicIcon.innerText = 'volume_up';
+                musicBtn.classList.add('music-playing');
+            }
+            isMusicPlaying = !isMusicPlaying;
+        }
+
+        musicBtn.addEventListener('click', toggleMusic);
+
+        // Attempt autoplay on load
+        window.addEventListener('DOMContentLoaded', () => {
+            // Animación reveal para el botón
+            setTimeout(() => musicBtn.classList.add('active'), 100);
+
+            bgMusic.play().then(() => {
+                isMusicPlaying = true;
+                musicIcon.innerText = 'volume_up';
+                musicBtn.classList.add('music-playing');
+            }).catch(e => {
+                console.log('Autoplay prevented by browser:', e);
+                isMusicPlaying = false;
+                musicIcon.innerText = 'volume_off';
+                
+                // Play on first interaction (click, touch, or scroll) if autoplay blocked
+                const startAudioOnInteraction = () => {
+                    if (!isMusicPlaying) toggleMusic();
+                    ['click', 'touchstart', 'scroll'].forEach(evt => {
+                        window.removeEventListener(evt, startAudioOnInteraction);
+                    });
+                };
+                
+                ['click', 'touchstart', 'scroll'].forEach(evt => {
+                    window.addEventListener(evt, startAudioOnInteraction, { once: true, passive: true });
+                });
+            });
+        });
     </script>
 </body>
 </html>
